@@ -1,7 +1,13 @@
 #!/bin/bash
 
-echo "installing homebrew ..."
-which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+if [ $(uname) = Darwin ]; then 
+	echo "installing Homebrew ..."
+	which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+else
+	echo "installing Linuxbrew ..."
+	which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+	export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+fi
 
 echo "run brew doctor ..."
 which brew >/dev/null 2>&1 && brew doctor
@@ -44,11 +50,13 @@ casks=(
 	notion
 )
 
-echo "start brew cask install apps ..."
-for cask in "${casks[@]}";
-do
-	brew install --cask $cask
-done
+if [ $(uname) = Darwin ]; then 
+	echo "start brew cask install apps ..."
+	for cask in "${casks[@]}";
+	do
+		brew install --cask $cask
+	done
+fi
 
 brew cleanup
 
