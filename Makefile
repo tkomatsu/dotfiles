@@ -1,13 +1,13 @@
 all: $$HOME/dotfiles
-	/bin/bash install.sh
-	make brew
-	make vim
+	@/bin/bash install.sh
+	@make brew
+	@make vim
 
 $$HOME/dotfiles:
-	cd $$HOME
+	@cd $$HOME
 
 vim:
-	/bin/bash install-vim.sh
+	@/bin/bash install-vim.sh
 
 brew:
-	/bin/bash install-brew.sh
+	@/bin/bash install-brew.sh
