@@ -9,3 +9,4 @@ cd ~/.norminette/
 bundle
 
 # 42 header
+ln -s dotfiles/stdheader.vim ~/.vim/plugin/
