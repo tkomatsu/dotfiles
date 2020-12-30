@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "installing homebrew ..."
-which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "run brew doctor ..."
 which brew >/dev/null 2>&1 && brew doctor
@@ -9,7 +9,7 @@ echo "run brew update ..."
 which brew >/dev/null 2>&1 && brew update
 
 echo "ok. run brew upgrade ..."
-brew upgrade --all
+brew upgrade
 
 formulas=(
 	git
@@ -17,7 +17,7 @@ formulas=(
 	curl
 	openssl
 	cask
-	doker
+	docker
 	vim
 )
 
@@ -42,9 +42,9 @@ casks=(
 )
 
 echo "start brew cask install apps ..."
-for cask in "${casks[@]}J";
+for cask in "${casks[@]}";
 do
-	brew cask install $cask
+	brew install --cask $cask
 done
 
 brew cleanup

@@ -126,5 +126,5 @@ alias ls='ls -G'
 #alias -g L='| less'
 #alias -g G='| grep'
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.nodebrew/current/bin:/usr/local/sbin:$PATH"
 eval "$(gh completion -s zsh)"
