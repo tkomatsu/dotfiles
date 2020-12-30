@@ -6,7 +6,7 @@ if [ $(uname) = Darwin ]; then
 else
 	echo "installing Linuxbrew ..."
 	which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-	export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+	export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/bin$PATH"
 fi
 
 echo "run brew doctor ..."
