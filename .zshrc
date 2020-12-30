@@ -1,12 +1,21 @@
+#            _
+#    _______| |__  _ __ ___
+#   |_  / __| '_ \| '__/ __|
+#  _ / /\__ \ | | | | | (__
+# (_)___|___/_| |_|_|  \___|
+
 export USER=tkomatsu
 export MAIL=$USER@student.42tokyo.jp
+
 alias norminette="~/.norminette/norminette.rb"
 alias gccW="gcc -Werror -Wall -Wextra"
+
 export PYENV_ROOT=/usr/local/var/pyenv
 if
 	which pyenv > /dev/null;
 	then eval "$(pyenv init -)";
 fi
+
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
@@ -16,8 +25,6 @@ colors
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 \$ "
 
-########################################
-# 補完
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit
@@ -36,7 +43,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 
-########################################
 # vcs_info
 autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
@@ -50,9 +56,6 @@ function _update_vcs_info_msg() {
 }
 add-zsh-hook precmd _update_vcs_info_msg
 
-
-########################################
-# オプション
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 
@@ -95,13 +98,6 @@ setopt extended_glob
 # ビープ音を鳴らさないようにする
 setopt no_beep
 
-########################################
-# キーバインド
-
-# ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
-# bindkey '^R' history-incremental-pattern-search-backward
-
-########################################
 # エイリアス
 
 alias l='ls'
@@ -120,7 +116,7 @@ alias ls='ls -G'
 
 #alias vim ='/usr/local/bin/vim'
 # sudo の後のコマンドでエイリアスを有効にする
-#alias sudo='sudo '
+alias sudo='sudo '
 
 # グローバルエイリアス
 #alias -g L='| less'
