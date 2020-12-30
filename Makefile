@@ -8,7 +8,7 @@ all: $$HOME/dotfiles
 	@make 42
 
 $$HOME/dotfiles:
-	@cd $$HOME
+	cd $$HOME
 
 vim:
 	@/bin/bash install-vim.sh
