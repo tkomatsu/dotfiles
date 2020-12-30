@@ -27,6 +27,8 @@ formulas=(
 	docker
 	vim
 	gh
+	rbenv
+	ruby-build
 )
 
 echo "brew tap ..."
@@ -48,6 +50,7 @@ casks=(
 	discord
 	font-hack-nerd-font
 	notion
+	deepl
 )
 
 if [ $(uname) = Darwin ]; then 

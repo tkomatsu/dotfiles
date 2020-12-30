@@ -11,9 +11,12 @@ alias norminette="~/.norminette/norminette.rb"
 alias gccW="gcc -Werror -Wall -Wextra"
 
 export PYENV_ROOT=/usr/local/var/pyenv
-if
-	which pyenv > /dev/null;
-	then eval "$(pyenv init -)";
+if which pyenv > /dev/null; then
+	eval "$(pyenv init -)";
+fi
+
+if which rbenv > /dev/null; then
+	eval "$(rbenv init -)";
 fi
 
 # 色を使用出来るようにする
