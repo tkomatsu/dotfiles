@@ -29,6 +29,7 @@ formulas=(
 	gh
 	rbenv
 	ruby-build
+	nasm
 )
 
 echo "brew tap ..."

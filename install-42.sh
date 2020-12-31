@@ -15,6 +15,7 @@ cp dotfiles/stdheader.vim ~/.vim/plugin/
 
 # minilibx-linux
 if [ $(uname) = Linux ]; then 
+	sudo apt-get install gcc make xorg libxext-dev libbsd-dev
 	cd $HOME/dotfiles/minilibx-linux
 	make 
 	cp libmlx.a /usr/local/lib/libmlx.a
