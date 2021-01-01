@@ -10,3 +10,7 @@
 	unstage = reset HEAD --
 [color]
 	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+[help]
+	autocorrect = 10

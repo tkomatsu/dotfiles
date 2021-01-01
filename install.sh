@@ -13,7 +13,7 @@ git submodule update
 echo "start setup..."
 cd $HOME
 
-for file in .vimrc .zshrc .gitconfig
+for file in .vimrc .zshrc .gitconfig .gitignore
 do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
