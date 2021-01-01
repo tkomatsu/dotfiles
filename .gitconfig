@@ -1,10 +1,12 @@
 [user]
 	name = tkomatsu
 	email = tkomatsu@student.42tokyo.jp
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[pull]
-	ff = only
+[alias]
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 => \\2/' | sort
+	ci = commit
+	a = add
+	st = status
+	plf = pull --ff-only
+	unstage = reset HEAD --
+[color]
+	ui = auto
