@@ -52,6 +52,7 @@ casks=(
 	font-hack-nerd-font
 	notion
 	deepl
+	amethyst
 )
 
 if [ $(uname) = Darwin ]; then 
