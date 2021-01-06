@@ -53,6 +53,7 @@ casks=(
 	notion
 	deepl
 	amethyst
+	toggl-track
 )
 
 if [ $(uname) = Darwin ]; then 
