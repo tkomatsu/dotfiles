@@ -1,0 +1,19 @@
+alias norminette="~/.norminette/norminette.rb"
+alias gccW="gcc -Werror -Wall -Wextra"
+
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -l'
+
+#alias rm='rm -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
+
+alias mkdir='mkdir -p'
+alias d='cd ~/Documents'
+alias 42='cd ~/Documents/42'
+alias ..='cd ..'
+alias ls='ls -G'
+
+# sudo の後のコマンドでエイリアスを有効にする
+alias sudo='sudo '

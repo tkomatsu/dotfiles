@@ -27,8 +27,7 @@ formulas=(
 	docker
 	vim
 	gh
-	rbenv
-	ruby-build
+	anyenv
 	nasm
 )
 
@@ -65,6 +64,15 @@ if [ $(uname) = Darwin ]; then
 fi
 
 brew cleanup
+
+# install Vundle for vim plugin
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# install rbenv pyenv nodenv
+anyenv install rbenv
+anyenv install pyenv
+anyenv install nodenv
+exec $SHELL -l
 
 cat << END
 

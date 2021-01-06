@@ -18,6 +18,8 @@ do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # Launchpad
 if [ $(uname) = Darwin ]; then 
 	defaults write com.apple.dock springboard-columns -int 10;defaults write com.apple.dock springboard-rows -int 6;defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
