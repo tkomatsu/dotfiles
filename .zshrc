@@ -10,13 +10,12 @@ export DOTFILES=$HOME/dotfiles
 
 eval "$(anyenv init -)"
 
+autoload -Uz colors && colors
+
 source $DOTFILES/.zshrc.xenv
 source $DOTFILES/.zshrc.alias
 source $DOTFILES/.zshrc.prompt
 source $DOTFILES/.zshrc.completion
-
-# 色を使用出来るようにする
-autoload -Uz colors && colors
 
 # フローコントロールを無効にする
 setopt no_flow_control
