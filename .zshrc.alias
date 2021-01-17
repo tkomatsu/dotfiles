@@ -1,5 +1,4 @@
 alias norminette="~/.norminette/norminette.rb"
-alias gccW="gcc -Werror -Wall -Wextra"
 
 alias l='ls'
 alias la='ls -a'
