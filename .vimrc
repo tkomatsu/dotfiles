@@ -19,6 +19,8 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'cocopon/iceberg.vim'
+Plugin 'cacharle/c_formatter_42.vim'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()            
 filetype plugin indent on
