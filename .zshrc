@@ -22,4 +22,4 @@ setopt hist_ignore_all_dups
 setopt auto_cd
 
 # Added by c_formatter_42
-export PATH="$PATH:/Users/tkomatsu/Desktop/c_formatter_42"
+export PATH="$PATH:/Users/tkomatsu/c_formatter_42"

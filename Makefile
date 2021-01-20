@@ -1,23 +1,19 @@
-#RUBYVER := 2.6.3
-
 all: $$HOME/dotfiles
-	@/bin/bash install.sh
+	@/bin/zsh install.sh
 	@make brew
 	@make vim
 	@make 42
+	@echo "if you want to install Inconsolate fonts, exec below command."
+	@echo "wget https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata%5Bwdth%2Cwght%5D.ttf"
 
 $$HOME/dotfiles:
 	cd $$HOME
 
 vim:
-	@/bin/bash install-vim.sh
+	@/bin/zsh install-vim.sh
 
 brew:
-	@/bin/bash install-brew.sh
-
-#ruby:
-#	rbenv install $(RUBYVER)
-#	rbenv global $(RUBYVER)
+	@/bin/zsh install-brew.sh
 
 42:
-	@/bin/bash install-42.sh
+	@/bin/zsh install-42.sh

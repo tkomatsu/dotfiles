@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/zsh
+
 set -u
 #set -x
 

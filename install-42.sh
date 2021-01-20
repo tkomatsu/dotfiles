@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 THIS_DIR=$(cd $(dirname $0); pwd)
 
