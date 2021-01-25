@@ -7,14 +7,16 @@
 export USER=tkomatsu
 export MAIL=$USER@student.42tokyo.jp
 export DOTFILES=$HOME/dotfiles
+export STARSHIP_CONFIG=$DOTFILES/starship/starship.toml
 
 eval "$(anyenv init -)"
+eval "$(starship init zsh)"
 
 autoload -Uz colors && colors
 
 source $DOTFILES/.zshrc.xenv
 source $DOTFILES/.zshrc.alias
-source $DOTFILES/.zshrc.prompt
+#source $DOTFILES/.zshrc.prompt
 source $DOTFILES/.zshrc.completion
 
 setopt ignore_eof

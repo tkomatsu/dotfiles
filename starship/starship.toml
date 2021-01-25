@@ -1,0 +1,17 @@
+[character]
+success_symbol = "[❯](#89b8c2)"
+
+[directory]
+truncation_length = 100
+truncation_to_repo = false
+style = "bold #89b8c2"
+
+[git_branch]
+style = "#84a0c6"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_status]
+style = "#b4be82"

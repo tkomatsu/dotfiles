@@ -29,6 +29,7 @@ formulas=(
 	gh
 	anyenv
 	nasm
+	starship
 )
 
 echo "brew tap ..."
