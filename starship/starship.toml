@@ -1,3 +1,12 @@
+add_newline = false
+
+format = "$all"
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
 [character]
 success_symbol = "[❯](#89b8c2)"
 
@@ -10,8 +19,11 @@ style = "bold #89b8c2"
 style = "#84a0c6"
 
 [git_commit]
-commit_hash_length = 4
-tag_symbol = "🔖 "
+format = "[($hash)]($style) [($tag)]($style)"
 
 [git_status]
 style = "#b4be82"
+
+[username]
+style_user = "bold #89b8c2"
+style_roog = "bold red"

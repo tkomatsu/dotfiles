@@ -16,7 +16,6 @@ autoload -Uz colors && colors
 
 source $DOTFILES/.zshrc.xenv
 source $DOTFILES/.zshrc.alias
-#source $DOTFILES/.zshrc.prompt
 source $DOTFILES/.zshrc.completion
 
 setopt ignore_eof
