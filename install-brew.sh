@@ -75,6 +75,9 @@ anyenv install pyenv
 anyenv install nodenv
 exec $SHELL -l
 
+# config
+mkdir -p $HOME/.config/gh & ln -s $HOME/dotfiles/gh/config.yml $HOME/.config/gh/config.yml
+
 cat << END
 
 ***********************************
