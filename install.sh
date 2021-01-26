@@ -19,8 +19,6 @@ do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
 
-mkdir mkdir -p ~/.config && ln -s dotfiles/starship.toml ~/.config/starship.toml
-
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Launchpad

@@ -10,6 +10,9 @@ discharging_symbol = "💀"
 [character]
 success_symbol = "[❯](#89b8c2)"
 
+[cmd_duration]
+disabled = true
+
 [directory]
 truncation_length = 100
 truncation_to_repo = false
