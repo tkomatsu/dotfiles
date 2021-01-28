@@ -19,17 +19,19 @@ echo "ok. run brew upgrade ..."
 brew upgrade
 
 formulas=(
-	git
-	wget
-	curl
-	openssl
-	cask
-	docker
-	vim
-	gh
 	anyenv
+	cask
+	cloc
+	curl
+	docker
+	gh
+	git
 	nasm
+	openssl
+	vim
+	wget
 	starship
+	minikube
 )
 
 echo "brew tap ..."
