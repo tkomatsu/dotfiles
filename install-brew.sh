@@ -56,6 +56,7 @@ casks=(
 	deepl
 	amethyst
 	toggl-track
+	visual-studio-code
 )
 
 if [ $(uname) = Darwin ]; then 
