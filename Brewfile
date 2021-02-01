@@ -2,7 +2,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-
 brew "anyenv"
 brew "openssl@1.1"
 brew "cask"
@@ -11,6 +10,7 @@ brew "curl"
 brew "docker"
 brew "gh"
 brew "git"
+brew "mas"
 brew "minikube"
 brew "nasm"
 brew "rbenv"
@@ -18,7 +18,6 @@ brew "ruby"
 brew "starship"
 brew "vim"
 brew "wget"
-
 cask "amethyst"
 cask "deepl"
 cask "discord"
@@ -32,6 +31,5 @@ cask "notion"
 cask "slack"
 cask "toggl-track"
 cask "visual-studio-code"
-
-mas "runcat", id: 1429033973
-mas "line", id: 539883307
+mas "LINE", id: 539883307
+mas "RunCat", id: 1429033973
