@@ -1,15 +1,15 @@
-#!/bin/zsh
+#!/bin/bash
 
 set -u
 #set -x
 
 THIS_DIR=$(cd $(dirname $0); pwd)
 
-cd $THIS_DIR
-git submodule init
-git submodule update
-
-#echo $THIS_DIR
+if [ $(uname) = Linux ]; then
+	cd $THIS_DIR
+	git submodule init
+	git submodule update
+fi
 
 echo "start setup..."
 cd $HOME
