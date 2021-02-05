@@ -21,6 +21,9 @@ done
 
 # Launchpad
 if [ $(uname) = Darwin ]; then 
+	defaults write com.apple.screencapture name "ss"
+	mkdir ~/Pictures/ScreenShots/
+	defaults write com.apple.screencapture location ~/Pictures/ScreenShots/
 	defaults write com.apple.dock springboard-columns -int 10;defaults write com.apple.dock springboard-rows -int 6;defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 	echo "installing Homebrew ..."
 	which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
