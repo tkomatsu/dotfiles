@@ -16,6 +16,7 @@ autoload -Uz colors && colors
 source $DOTFILES/.zshrc.xenv
 source $DOTFILES/.zshrc.alias
 source $DOTFILES/.zshrc.completion
+source $HOME/.zshrc.ssh
 
 setopt ignore_eof
 setopt hist_ignore_all_dups
