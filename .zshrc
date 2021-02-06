@@ -4,7 +4,6 @@
 #  _ / /\__ \ | | | | | (__
 # (_)___|___/_| |_|_|  \___|
 
-export USER=tkomatsu
 export MAIL=$USER@student.42tokyo.jp
 export DOTFILES=$HOME/dotfiles
 export STARSHIP_CONFIG=$DOTFILES/starship/starship.toml
