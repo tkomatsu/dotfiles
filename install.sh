@@ -1,15 +1,15 @@
-#!/bin/zsh
+#!/bin/bash
 
 set -u
 #set -x
 
 THIS_DIR=$(cd $(dirname $0); pwd)
 
-cd $THIS_DIR
-git submodule init
-git submodule update
-
-#echo $THIS_DIR
+if [ $(uname) = Linux ]; then
+	cd $THIS_DIR
+	git submodule init
+	git submodule update
+fi
 
 echo "start setup..."
 cd $HOME
@@ -19,10 +19,11 @@ do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 # Launchpad
 if [ $(uname) = Darwin ]; then 
+	defaults write com.apple.screencapture name "ss"
+	mkdir ~/Pictures/ScreenShots/
+	defaults write com.apple.screencapture location ~/Pictures/ScreenShots/
 	defaults write com.apple.dock springboard-columns -int 10;defaults write com.apple.dock springboard-rows -int 6;defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 	echo "installing Homebrew ..."
 	which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

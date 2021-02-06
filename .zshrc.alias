@@ -16,3 +16,5 @@ alias ls='ls -G'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
+
+alias zenn="npx zenn"
