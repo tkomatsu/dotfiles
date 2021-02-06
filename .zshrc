@@ -9,7 +9,6 @@ export MAIL=$USER@student.42tokyo.jp
 export DOTFILES=$HOME/dotfiles
 export STARSHIP_CONFIG=$DOTFILES/starship/starship.toml
 
-eval "$(anyenv init -)"
 eval "$(starship init zsh)"
 
 autoload -Uz colors && colors
