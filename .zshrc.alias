@@ -17,4 +17,6 @@ alias ls='ls -G'
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
+alias python='python3'
+
 alias zenn="npx zenn"
