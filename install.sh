@@ -14,7 +14,7 @@ fi
 echo "start setup..."
 cd $HOME
 
-for file in .vimrc .zshrc .gitconfig .gitignore
+for file in .vimrc .zshrc .gitconfig .gitignore .czrc
 do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
