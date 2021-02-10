@@ -19,6 +19,8 @@ do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
 
+touch ~/.zshrc.local
+
 # Launchpad
 if [ $(uname) = Darwin ]; then 
 	defaults write com.apple.screencapture name "ss"
