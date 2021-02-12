@@ -32,6 +32,7 @@ cask "notion"
 cask "slack"
 cask "toggl-track"
 cask "visual-studio-code"
-cask "zoomus"
+cask "zoom"
 mas "LINE", id: 539883307
 mas "RunCat", id: 1429033973
+    
