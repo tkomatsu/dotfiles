@@ -19,3 +19,5 @@
 	InsteadOf = git@github.com:
 [fetch]
 	prune = true
+[pull]
+	rebase = false
