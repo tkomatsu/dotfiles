@@ -8,6 +8,8 @@
 	st = status
 	plf = pull --ff-only
 	unstage = resotre --staged
+	b = branch
+	ch = checkout
 [color]
 	ui = auto
 [core]
