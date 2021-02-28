@@ -14,7 +14,7 @@ fi
 echo "start setup..."
 cd $HOME
 
-for file in .vimrc .zshrc .gitconfig .gitignore .czrc
+for file in .vimrc .zshrc .gitconfig .gitignore .czrc .tmux.conf
 do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
