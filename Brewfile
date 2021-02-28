@@ -5,6 +5,7 @@ tap "homebrew/core"
 brew "anyenv"
 brew "openssl@1.1"
 brew "cask"
+brew "clang-format"
 brew "cloc"
 brew "curl"
 brew "docker"
@@ -35,4 +36,3 @@ cask "visual-studio-code"
 cask "zoom"
 mas "LINE", id: 539883307
 mas "RunCat", id: 1429033973
-    
