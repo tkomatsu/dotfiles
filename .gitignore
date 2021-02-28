@@ -3,3 +3,4 @@
 a.out
 Brewfile.lock.json
 .vscode/
+*.dSYM/
