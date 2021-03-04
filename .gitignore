@@ -4,3 +4,5 @@ a.out
 Brewfile.lock.json
 .vscode/
 *.dSYM/
+*.bak
+common_tester

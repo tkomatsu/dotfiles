@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AutoHideTmuxClientSession</key>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>iceberg</key>
@@ -277,6 +279,10 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>524288</integer>
+	<key>NeverWarnAboutShortLivedSessions_B3A5C5FE-40E8-4E54-B814-D52B1146E63D</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_B3A5C5FE-40E8-4E54-B814-D52B1146E63D_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -591,6 +597,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string></string>
 			<key>Initial Use Transparency</key>
 			<true/>
 			<key>Jobs to Ignore</key>
