@@ -20,6 +20,7 @@ source $HOME/.zshrc.local
 setopt ignore_eof
 setopt hist_ignore_all_dups
 setopt auto_cd
+cdpath=(~/Documents/42)
 
 # Added by c_formatter_42
 export PATH="$PATH:/Users/tkomatsu/c_formatter_42"
