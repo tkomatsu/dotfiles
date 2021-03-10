@@ -10,7 +10,6 @@ alias ll='ls -l'
 
 alias mkdir='mkdir -p'
 alias d='cd ~/Documents'
-alias 42='cd ~/Documents/42'
 alias ..='cd ..'
 alias ls='ls -G'
 
