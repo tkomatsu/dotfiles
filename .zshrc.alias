@@ -1,5 +1,5 @@
 function norminette() {
-	docker run --rm -v $PWD/$1:/code norminette /code
+	docker run --rm -v $PWD:/code norminette /code/$1
 }
 
 alias l='ls'
