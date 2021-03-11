@@ -19,6 +19,7 @@ source $HOME/.zshrc.local
 
 setopt ignore_eof
 setopt hist_ignore_all_dups
+setopt share_history
 setopt auto_cd
 cdpath=(~/Documents/42)
 

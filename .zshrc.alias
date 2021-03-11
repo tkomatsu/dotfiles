@@ -1,4 +1,6 @@
-alias norminette="~/.norminette/norminette.rb"
+function norminette() {
+	docker run --rm -v $PWD/$1:/code norminette /code
+}
 
 alias l='ls'
 alias la='ls -a'
