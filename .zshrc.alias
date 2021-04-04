@@ -2,6 +2,10 @@ function norminette() {
 	docker run --rm -v $PWD:/code alexandregv/norminette:v3 /code/$1
 }
 
+function v2norminette() {
+	docker run --rm -v $PWD:/code alexandregv/norminette:v2 /code/$1
+}
+
 function ftmerge() {
 	git remote add -f libft git@github.com:tkomatsu/libft
 	git merge -s ours --no-commit --allow-unrelated-histories libft/master
@@ -10,9 +14,9 @@ function ftmerge() {
 	git commit -m "merge libft"
 }
 
-alias l='ls'
-alias la='ls -a'
-alias ll='ls -l'
+alias l='exa -F'
+alias la='exa -aa -F'
+alias ll='exa -l -F -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
 
 #alias rm='rm -i'
 #alias cp='cp -i'
