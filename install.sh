@@ -59,6 +59,11 @@ anyenv install pyenv
 anyenv install nodenv
 exec $SHELL -l
 
+# install iterm2 shell integration
+if [ $(uname) = Darwin ]; then
+	curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+fi
+
 # config
 mkdir -p $HOME/.config/gh & ln -s $HOME/dotfiles/gh/config.yml $HOME/.config/gh/config.yml
 mkdir -p $HOME/.config/bat & ln -s $HOME/dotfiles/bat/config $HOME/.config/bat/config
