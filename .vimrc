@@ -38,6 +38,7 @@ set tabstop=4
 set shiftwidth=4
 set encoding=UTF-8
 set backspace=2
+set mouse=a
 
 " color
 colorscheme iceberg

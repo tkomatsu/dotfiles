@@ -2,10 +2,6 @@ function norminette() {
 	docker run --rm -v $PWD:/code alexandregv/norminette:v3 /code/$1
 }
 
-function v2norminette() {
-	docker run --rm -v $PWD:/code alexandregv/norminette:v2 /code/$1
-}
-
 function ftmerge() {
 	git remote add -f libft git@github.com:tkomatsu/libft
 	git merge -s ours --no-commit --allow-unrelated-histories libft/master
