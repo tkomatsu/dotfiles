@@ -23,9 +23,6 @@ setopt share_history
 setopt auto_cd
 cdpath=(~/Documents/42)
 
-# Added by c_formatter_42
-export PATH="$PATH:/Users/tkomatsu/c_formatter_42"
-
 export PATH="/usr/local/sbin:$PATH"
 export LANG=en_US.UTF-8
 

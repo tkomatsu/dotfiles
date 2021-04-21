@@ -8,3 +8,4 @@ Brewfile.lock.json
 *.o
 *.elf
 common_tester
+*.swp
