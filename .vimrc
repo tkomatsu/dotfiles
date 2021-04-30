@@ -24,6 +24,7 @@ Plugin 'prabirshrestha/vim-lsp'
 Plugin 'mattn/vim-lsp-settings'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'drmikehenry/vim-headerguard'
 
 call vundle#end()            
 filetype plugin indent on
@@ -59,4 +60,4 @@ set completeopt=menuone,noinsert
 inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
 inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
+nnoremap <F2> :HeaderguardAdd<CR>

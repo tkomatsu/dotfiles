@@ -7,5 +7,4 @@ Brewfile.lock.json
 *.bak
 *.o
 *.elf
-common_tester
 *.swp
