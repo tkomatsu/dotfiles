@@ -31,18 +31,24 @@ filetype plugin indent on
 
 " etc config
 language en_US.utf-8
+syntax enable
 set number
 set cursorline
 set smartindent
 set showmatch
 set laststatus=2
-syntax enable
 set list listchars=tab:\▸\-
 set tabstop=4
 set shiftwidth=4
 set encoding=UTF-8
 set backspace=2
 set mouse=a
+set hidden
+
+" git commit 時にはプラグインは読み込まない
+if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
+  finish
+end
 
 " color
 colorscheme iceberg
@@ -61,3 +67,6 @@ inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
 inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap <F2> :HeaderguardAdd<CR>
+nnoremap <F12> :LspDefinition<CR>
+nnoremap <S-F12> :LspDeclaration<CR>
+nnoremap gd :LspDefinition<CR>

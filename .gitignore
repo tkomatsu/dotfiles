@@ -8,3 +8,7 @@ Brewfile.lock.json
 *.o
 *.elf
 *.swp
+*.a
+.vscode
+compile_flags.txt
+en.subject.pdf

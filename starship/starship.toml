@@ -15,7 +15,7 @@ disabled = true
 
 [directory]
 truncation_length = 100
-truncation_to_repo = false
+truncation_symbol = false
 style = "bold #89b8c2"
 
 [git_branch]
@@ -29,4 +29,4 @@ style = "#b4be82"
 
 [username]
 style_user = "bold #89b8c2"
-style_roog = "bold red"
+style_root = "bold red"
