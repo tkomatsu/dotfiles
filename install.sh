@@ -16,7 +16,7 @@ done
 echo 'export PATH=~/homebrew/bin:$PATH' >> ~/.zshrc.local
 
 echo "installing Homebrew ..."
-which brew >/dev/null 2>&1 || cd$HOME; mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+which brew >/dev/null 2>&1 || cd $HOME; curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
 
 cd $THIS_DIR
 
@@ -29,7 +29,7 @@ brew update
 echo "ok. run brew upgrade ..."
 brew upgrade
 
-brew bundle
+# brew bundle
 
 brew cleanup
 
