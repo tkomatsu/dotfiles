@@ -8,8 +8,6 @@ export MAIL=$USER@student.42tokyo.jp
 export DOTFILES=$HOME/dotfiles
 export STARSHIP_CONFIG=$DOTFILES/starship/starship.toml
 
-#eval "$(starship init zsh)"
-
 autoload -Uz colors && colors
 
 source $DOTFILES/.zshrc.xenv
@@ -26,4 +24,6 @@ cdpath=(~/Documents/42)
 export PATH="/usr/local/sbin:$PATH"
 export LANG=en_US.UTF-8
 
+PS1='%n@%m[%~]
+%# '
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

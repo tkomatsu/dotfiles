@@ -10,9 +10,12 @@ function ftmerge() {
 	git commit -m "merge libft"
 }
 
-alias l='exa -F'
-alias la='exa -aa -F'
-alias ll='exa -l -F -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
+alias ..='cd ..'
+alias ls='ls -G'
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -l'
+alias clang++='clang++ -Wall -Werror -Wextra'
 
 #alias rm='rm -i'
 #alias cp='cp -i'
