@@ -28,9 +28,7 @@ brew update
 
 echo "ok. run brew upgrade ..."
 brew upgrade
-
-# brew bundle
-
+brew install font-hack-nerd-font --cask
 brew cleanup
 
 # config

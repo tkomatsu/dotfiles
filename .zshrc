@@ -13,6 +13,7 @@ autoload -Uz colors && colors
 source $DOTFILES/.zshrc.xenv
 source $DOTFILES/.zshrc.alias
 source $DOTFILES/.zshrc.completion
+source $DOTFILES/.zshrc.prompt
 source $HOME/.zshrc.local
 
 setopt ignore_eof
@@ -24,6 +25,4 @@ cdpath=(~/Documents/42)
 export PATH="/usr/local/sbin:$PATH"
 export LANG=en_US.UTF-8
 
-PS1='%n@%m[%~]
-%# '
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
