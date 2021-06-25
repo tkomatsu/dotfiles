@@ -37,7 +37,7 @@ set cursorline
 set smartindent
 set showmatch
 set laststatus=2
-set list listchars=tab:\▸\-
+set list listchars=tab:\▸\-,space:\·
 set tabstop=4
 set shiftwidth=4
 set encoding=UTF-8

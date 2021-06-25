@@ -12,3 +12,5 @@ Brewfile.lock.json
 .vscode
 compile_flags.txt
 en.subject.pdf
+ja.subject.pdf
+review.html
