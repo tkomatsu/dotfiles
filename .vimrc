@@ -50,6 +50,11 @@ if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
   finish
 end
 
+" folding
+set foldmethod=indent
+set foldlevel=2
+" set foldcolumn=3
+
 " color
 colorscheme iceberg
 
