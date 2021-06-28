@@ -16,7 +16,7 @@ done
 echo 'export PATH=~/homebrew/bin:$PATH' >> ~/.zshrc.local
 
 echo "installing Homebrew ..."
-which brew >/dev/null 2>&1 || cd $HOME; curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+which brew >/dev/null 2>&1 || cd $HOME; curl https://brew.42.fr | zsh
 
 cd $THIS_DIR
 
