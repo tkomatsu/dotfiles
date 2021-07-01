@@ -38,8 +38,9 @@ set smartindent
 set showmatch
 set laststatus=2
 set list listchars=tab:\▸\-,space:\·
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set shiftround
 set encoding=UTF-8
 set backspace=2
 set mouse=a
@@ -51,8 +52,8 @@ if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
 end
 
 " folding
-set foldmethod=indent
-set foldlevel=2
+" set foldmethod=indent
+" set foldlevel=2
 " set foldcolumn=3
 
 " color
@@ -75,3 +76,12 @@ nnoremap <F2> :HeaderguardAdd<CR>
 nnoremap <F12> :LspDefinition<CR>
 nnoremap <S-F12> :LspDeclaration<CR>
 nnoremap gd :LspDefinition<CR>
+
+" indent
+filetype on
+augroup vimrc
+	autocmd!
+	autocmd FileType c,cpp setl cindent
+	autocmd FileType c setl tabstop=4 shiftwidth=4
+	autocmd FileType cpp setl expandtab tabstop=2 shiftwidth=2
+augroup END
