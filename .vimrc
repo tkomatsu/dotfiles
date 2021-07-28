@@ -45,6 +45,7 @@ set encoding=UTF-8
 set backspace=2
 set mouse=a
 set hidden
+set background=dark
 
 " git commit 時にはプラグインは読み込まない
 if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
