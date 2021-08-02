@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'cocopon/iceberg.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'mattn/vim-lsp-settings'
@@ -43,6 +44,7 @@ set encoding=UTF-8
 set backspace=2
 set mouse=a
 set hidden
+set background=dark
 
 " git commit 時にはプラグインは読み込まない
 if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
@@ -52,6 +54,16 @@ end
 " vim-devicons config
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
+
+" color
+colorscheme iceberg
+
+" vim-devicons config
+let g:webdevicons_enable_nerdtree = 0
+let g:webdevicons_conceal_nerdtree_brackets = 0
+
+" vim-airline config
+let g:airline_theme = 'iceberg'
 
 " 補完表示時のEnterで改行をしない
 inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
@@ -63,3 +75,12 @@ nnoremap <F2> :HeaderguardAdd<CR>
 nnoremap <F12> :LspDefinition<CR>
 nnoremap <S-F12> :LspDeclaration<CR>
 nnoremap gd :LspDefinition<CR>
+
+" indent
+filetype on
+augroup vimrc
+	autocmd!
+	autocmd FileType c,cpp setl cindent
+	autocmd FileType c setl tabstop=4 shiftwidth=4
+	autocmd FileType cpp setl expandtab tabstop=2 shiftwidth=2
+augroup END

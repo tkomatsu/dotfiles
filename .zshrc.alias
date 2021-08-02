@@ -1,21 +1,9 @@
-function ftmerge() {
-	git remote add -f libft git@github.com:tkomatsu/libft
-	git merge -s ours --no-commit --allow-unrelated-histories libft/master
-	git read-tree --prefix=$1 -u libft/master
-	git rm .gitmodules
-	git commit -m "merge libft"
-}
-
 alias ..='cd ..'
 alias ls='ls -G'
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias clang++='clang++ -Wall -Werror -Wextra'
-
-#alias rm='rm -i'
-#alias cp='cp -i'
-#alias mv='mv -i'
 
 alias mkdir='mkdir -p'
 alias d='cd ~/Documents'
@@ -26,5 +14,3 @@ alias ls='ls -G'
 alias sudo='sudo '
 
 alias python='python3'
-
-alias zenn="npx zenn"

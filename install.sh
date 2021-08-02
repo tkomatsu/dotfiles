@@ -27,11 +27,7 @@ cd $HOME
 # install Vundle for vim plugin
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-for file in .vimrc .gitconfig .gitignore .tmux.conf
+for file in .vimrc .gitconfig .gitignore
 do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
-
-# config
-mkdir -p $HOME/.config/gh & ln -s $HOME/dotfiles/gh/config.yml $HOME/.config/gh/config.yml
-mkdir -p $HOME/.config/bat & ln -s $HOME/dotfiles/bat/config $HOME/.config/bat/config
