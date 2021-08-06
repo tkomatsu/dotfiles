@@ -1,5 +1,5 @@
 function norminette() {
-	docker run --rm -v $PWD:/code tkomatsu/norminette:3.2.8 /code/$1
+	docker run --rm -v $PWD:/code tkomatsu/norminette /code/$1
 }
 
 function ftmerge() {
