@@ -30,6 +30,8 @@ alias python='python3'
 
 alias zenn="npx zenn"
 
+alias compose="docker compose"
+
 function ide() {
 	tmux split-window -v -p 30
 	tmux split-window -h -p 66

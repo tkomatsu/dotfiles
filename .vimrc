@@ -1,14 +1,14 @@
-"        _                    
-"       (_)                   
-" __   ___ _ __ ___  _ __ ___ 
+"        _
+"       (_)
+" __   ___ _ __ ___  _ __ ___
 " \ \ / / | '_ ` _ \| '__/ __|
-"  \ V /| | | | | | | | | (__ 
+"  \ V /| | | | | | | | | (__
 " (_)_/ |_|_| |_| |_|_|  \___|
 "
 
 " Vundle config
 set nocompatible
-filetype off 
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -26,7 +26,7 @@ Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'drmikehenry/vim-headerguard'
 
-call vundle#end()            
+call vundle#end()
 filetype plugin indent on
 
 " etc config
@@ -46,6 +46,7 @@ set backspace=2
 set mouse=a
 set hidden
 set background=dark
+set colorcolumn=80
 
 " git commit 時にはプラグインは読み込まない
 if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
