@@ -13,7 +13,7 @@ autoload -Uz colors && colors
 source $DOTFILES/.zshrc.xenv
 source $DOTFILES/.zshrc.alias
 source $DOTFILES/.zshrc.completion
-source $DOTFILES/.zshrc.prompt
+# source $DOTFILES/.zshrc.prompt
 source $HOME/.zshrc.local
 
 setopt ignore_eof

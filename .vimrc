@@ -44,20 +44,21 @@ set encoding=UTF-8
 set backspace=2
 set mouse=a
 set hidden
+set background=dark
 
 " git commit 時にはプラグインは読み込まない
 if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
   finish
 end
 
-" color
+" " color
 colorscheme iceberg
 
 " vim-devicons config
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
-" vim-airline config
+" " vim-airline config
 let g:airline_theme = 'iceberg'
 
 " 補完表示時のEnterで改行をしない
