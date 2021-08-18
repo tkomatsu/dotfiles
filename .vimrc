@@ -37,7 +37,7 @@ set cursorline
 set smartindent
 set showmatch
 set laststatus=2
-set list listchars=tab:\▸\-
+set list listchars=tab:\>\-
 set tabstop=4
 set shiftwidth=4
 set encoding=UTF-8
@@ -51,12 +51,12 @@ if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
   finish
 end
 
-" " color
+" color
 colorscheme iceberg
 
 " vim-devicons config
-let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_conceal_nerdtree_brackets = 1
+let g:webdevicons_enable_nerdtree = 0
+let g:webdevicons_conceal_nerdtree_brackets = 0
 
 " " vim-airline config
 let g:airline_theme = 'iceberg'
@@ -71,3 +71,12 @@ nnoremap <F2> :HeaderguardAdd<CR>
 nnoremap <F12> :LspDefinition<CR>
 nnoremap <S-F12> :LspDeclaration<CR>
 nnoremap gd :LspDefinition<CR>
+
+" indent
+filetype on
+augroup vimrc
+	autocmd!
+	autocmd FileType c,cpp setl cindent
+	autocmd FileType c setl tabstop=4 shiftwidth=4
+	autocmd FileType cpp setl expandtab tabstop=2 shiftwidth=2
+augroup END
