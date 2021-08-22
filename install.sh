@@ -31,3 +31,5 @@ for file in .vimrc .gitconfig .gitignore
 do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
+
+vim -c 'PluginInstall'
