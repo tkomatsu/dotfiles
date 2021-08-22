@@ -26,4 +26,3 @@ export PATH="/usr/local/sbin:$PATH"
 export LANG=en_US.UTF-8
 
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH=/Users/tkomatsu/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/munki
