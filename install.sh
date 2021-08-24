@@ -27,7 +27,7 @@ cd $HOME
 # install Vundle for vim plugin
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-for file in .vimrc .gitconfig .gitignore
+for file in .bashrc .vimrc .gitconfig .gitignore
 do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
