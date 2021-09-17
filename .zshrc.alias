@@ -10,6 +10,10 @@ function ftmerge() {
 	git commit -m "merge libft"
 }
 
+function leakcheck() {
+	while true; do res=$(leaks $@); if [ $? -ne 0 ]; then echo "$res"; break; fi; sleep 5; done
+}
+
 alias l='exa -F'
 alias la='exa -aa -F'
 alias ll='exa -l -F -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
