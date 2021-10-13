@@ -47,6 +47,7 @@ set mouse=a
 set hidden
 set background=dark
 set colorcolumn=80
+set expandtab
 
 " git commit 時にはプラグインは読み込まない
 if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
@@ -84,6 +85,6 @@ filetype on
 augroup vimrc
 	autocmd!
 	autocmd FileType c,cpp setl cindent
-	autocmd FileType c setl tabstop=4 shiftwidth=4
-	autocmd FileType cpp setl expandtab tabstop=2 shiftwidth=2
+	autocmd FileType c,h setl noexpandtab tabstop=4 shiftwidth=4
+	autocmd FileType cpp,hpp setl expandtab tabstop=2 shiftwidth=2
 augroup END

@@ -21,9 +21,10 @@ setopt ignore_eof
 setopt hist_ignore_all_dups
 setopt share_history
 setopt auto_cd
-cdpath=(~/Documents/42)
+cdpath=(~/Documents)
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 export LANG=en_US.UTF-8
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
