@@ -7,7 +7,7 @@
 	a = add
 	st = status
 	plf = pull --ff-only
-	unstage = resotre --staged
+	unstage = restore --staged
 	b = branch
 	ch = checkout
 [color]

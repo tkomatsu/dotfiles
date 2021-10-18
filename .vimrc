@@ -87,4 +87,5 @@ augroup vimrc
 	autocmd FileType c,cpp setl cindent
 	autocmd FileType c,h setl noexpandtab tabstop=4 shiftwidth=4
 	autocmd FileType cpp,hpp setl expandtab tabstop=2 shiftwidth=2
+	autocmd FileType go setl noexpandtab tabstop=2 shiftwidth=2
 augroup END
