@@ -17,6 +17,7 @@ source $DOTFILES/.zshrc.alias
 source $DOTFILES/.zshrc.completion
 source $HOME/.zshrc.local
 
+bindkey -v
 setopt ignore_eof
 setopt hist_ignore_all_dups
 setopt share_history
