@@ -16,9 +16,8 @@
 	excludesfile = ~/.gitignore
 [help]
 	autocorrect = 10
-[url "github:"]
+[url "ssh://git@github.com/"]
 	InsteadOf = https://github.com/
-	InsteadOf = git@github.com:
 [fetch]
 	prune = true
 [pull]

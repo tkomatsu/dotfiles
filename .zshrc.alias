@@ -1,17 +1,55 @@
 function norminette() {
-	docker run --rm -v $PWD:/code tkomatsu/norminette /code/$1
+  docker run --rm -v $PWD:/code tkomatsu/norminette /code/$1
 }
 
 function ftmerge() {
-	git remote add -f libft git@github.com:tkomatsu/libft
-	git merge -s ours --no-commit --allow-unrelated-histories libft/master
-	git read-tree --prefix=$1 -u libft/master
-	git rm .gitmodules
-	git commit -m "merge libft"
+  git remote add -f libft git@github.com:tkomatsu/libft
+  git merge -s ours --no-commit --allow-unrelated-histories libft/master
+  git read-tree --prefix=$1 -u libft/master
+  git rm .gitmodules
+  git commit -m "merge libft"
 }
 
 function leakcheck() {
-	while true; do res=$(leaks $@); if [ $? -ne 0 ]; then echo "$res"; break; fi; sleep 5; done
+  while true; do res=$(leaks $@); if [ $? -ne 0 ]; then echo "$res"; break; fi; sleep 5; done
+}
+
+function ftbrowse() {
+  if [ -z $1 ]; then
+    list=$(goft repo list)
+  else
+    list=$(goft repo list -L $1)
+  fi
+  echo "$list" | awk '{printf "%2d%s\n", NR, " : "$1}'
+  echo -ne "\nselect index\n$> "
+  read index
+
+  if [ -z $index ]; then
+    return
+  fi
+  goft browse $(echo "$list" | awk -v idx=$index 'NR==idx{print}')
+}
+
+function ftclone () {
+  if [ -z $1 ]; then
+    list=$(goft repo list)
+  else
+    list=$(goft repo list -L $1)
+  fi
+  echo "$list" | awk '{printf "%2d%s\n", NR, " : "$1}'
+  echo -ne "\nselect index\n$> "
+  read index
+
+  if [ -z $index ]; then
+    return
+  fi
+  echo -ne "dir name\n$> "
+  read name
+  if [ -z $name ]; then
+    goft repo clone $(echo "$list" | awk -v idx=$index 'NR==idx{print}')
+  else
+    goft repo clone $(echo "$list" | awk -v idx=$index 'NR==idx{print}') $name
+  fi
 }
 
 alias l='exa -F'
@@ -37,7 +75,7 @@ alias zenn="npx zenn"
 alias compose="docker compose"
 
 function ide() {
-	tmux split-window -v -p 30
-	tmux split-window -h -p 66
-	tmux split-window -h -p 50
+  tmux split-window -v -p 30
+  tmux split-window -h -p 66
+  tmux split-window -h -p 50
 }
