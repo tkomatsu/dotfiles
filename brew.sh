@@ -1,0 +1,1 @@
+rm -rf "$HOME/goinfre/.brew" && git clone --depth=1 https://github.com/Homebrew/brew "$HOME/goinfre/.brew" && export PATH="$HOME/goinfre/.brew/bin:$PATH" && brew update && echo 'export PATH="$HOME/goinfre/.brew/bin:$PATH"' >> ~/.zshrc

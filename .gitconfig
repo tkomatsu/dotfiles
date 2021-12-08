@@ -22,3 +22,6 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[url "github:"]
+    InsteadOf = https://github.com/
+    InsteadOf = git@github.com:

@@ -5,10 +5,10 @@ THIS_DIR=$(cd $(dirname $0); pwd)
 echo "start setup..."
 
 cd $HOME
-ln -s dotfiles/.zshrc .
+ln -s $THIS_DIR/.zshrc .
 
 echo "installing Homebrew ..."
-which brew >/dev/null 2>&1 || cd $HOME; curl https://brew.42.fr | zsh
+which brew >/dev/null 2>&1 || cd $HOME; zsh $THIS_DIR/brew.sh
 
 cd $THIS_DIR
 
@@ -29,7 +29,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 for file in .bashrc .vimrc .gitconfig .gitignore
 do
-	[ ! -e $file ] && ln -s dotfiles/$file .
+	[ ! -e $file ] && ln -s $THIS_DIR/$file .
 done
 
 vim -c 'PluginInstall'
