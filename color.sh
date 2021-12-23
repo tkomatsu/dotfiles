@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 for fgbg in 38 48 ; do #Foreground/Background
   for color in {0..256} ; do #Colors
     #Display the color
