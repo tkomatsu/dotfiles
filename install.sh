@@ -50,6 +50,9 @@ brew cleanup
 # install Vundle for vim plugin
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+# install zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
 # install rbenv pyenv nodenv
 anyenv install rbenv
 anyenv install pyenv

@@ -21,3 +21,5 @@ if [ $(uname) = Linux ]; then
 	source <(kubectl completion zsh)
 	source <(minikube completion zsh)
 fi
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
