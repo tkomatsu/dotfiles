@@ -71,7 +71,7 @@ augroup vimrc
 	autocmd FileType cpp,hpp setl expandtab tabstop=2 shiftwidth=2
 	autocmd FileType js,ts setl expandtab tabstop=2 shiftwidth=2
 	autocmd FileType go setl noexpandtab tabstop=2 shiftwidth=2
-	autocmd FileType rust setl expandtab tabstop=4 shiftwidth=4
+	autocmd FileType rust,php setl expandtab tabstop=4 shiftwidth=4
 augroup END
 
 " etc config
