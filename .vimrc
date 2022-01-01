@@ -6,6 +6,11 @@
 " (_)_/ |_|_| |_| |_|_|  \___|
 "
 
+" git commit 時にはプラグインは読み込まない
+if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
+  finish
+end
+
 " Vundle config
 set nocompatible
 filetype off
@@ -33,11 +38,6 @@ Plugin 'mattn/vim-goimports'
 call vundle#end()
 filetype plugin indent on
 
-" git commit 時にはプラグインは読み込まない
-if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
-  finish
-end
-
 " color
 colorscheme iceberg
 
@@ -51,7 +51,6 @@ let g:airline_theme = 'iceberg'
 " vim-goimports
 let g:goimports = 1
 
-" 補完表示時のEnterで改行をしない
 inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
 set completeopt=menuone,noinsert
 inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
