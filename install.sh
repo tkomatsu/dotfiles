@@ -16,13 +16,14 @@ do
 	[ ! -e $file ] && ln -s dotfiles/$file .
 done
 
-touch ~/.zshrc.local
+touch $HOME/zshrc.local
+mkdir $HOME/.vim/undo
 
 # Launchpad
 if [ $(uname) = Darwin ]; then 
 	defaults write com.apple.screencapture name "ss"
-	mkdir ~/Pictures/ScreenShots/
-	defaults write com.apple.screencapture location ~/Pictures/ScreenShots/
+	mkdir $HOME/Pictures/ScreenShots/
+	defaults write com.apple.screencapture location $HOME/Pictures/ScreenShots/
 	defaults write com.apple.dock springboard-columns -int 10;defaults write com.apple.dock springboard-rows -int 6;defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 	echo "installing Homebrew ..."
 	which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -48,10 +49,10 @@ brew bundle
 brew cleanup
 
 # install Vundle for vim plugin
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
 # install zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosuggestions
 
 # install rbenv pyenv nodenv
 anyenv install rbenv
