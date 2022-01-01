@@ -1,27 +1,30 @@
 [user]
-	name = tkomatsu
-	email = tkomatsu@student.42tokyo.jp
+  name = tkomatsu
+  email = 46949817+tkomatsu@users.noreply.github.com
 [alias]
-	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 => \\2/' | sort
-	ci = commit
-	a = add
-	st = status
-	plf = pull --ff-only
-	unstage = restore --staged
-	b = branch
-	ch = checkout
-	p = push
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 => \\2/' | sort
+  ci = commit
+  a = add
+  aa = add .
+  st = status
+  plf = pull --ff-only
+  unstage = restore --staged
+  b = branch
+  ch = checkout
+  p = push
+  d = diff
+  ds = diff --staged
 [color]
-	ui = auto
+  ui = auto
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [help]
-	autocorrect = 10
+  autocorrect = 10
 [url "ssh://git@github.com/"]
-	InsteadOf = https://github.com/
+  InsteadOf = https://github.com/
 [fetch]
-	prune = true
+  prune = true
 [pull]
-	rebase = false
+  rebase = false
 [init]
-	defaultBranch = main
+  defaultBranch = main
