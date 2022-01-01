@@ -6,6 +6,50 @@
 " (_)_/ |_|_| |_| |_|_|  \___|
 "
 
+language en_US.utf-8
+syntax enable
+set number
+set cursorline
+set smartindent
+set showmatch
+set laststatus=2
+set list listchars=tab:\▸\-,space:\·
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set encoding=UTF-8
+set backspace=2
+set mouse=a
+set hidden
+set background=dark
+set colorcolumn=80
+set expandtab
+set fileencodings=utf-8,default,latin1,ucs-bom
+set hlsearch
+set incsearch
+set clipboard+=unnamed
+set wildmenu
+
+if has('persistent_undo')
+  let undo_path = expand('~/.vim/undo')
+  exe 'set undodir=' .. undo_path
+  set undofile
+endif
+
+nnoremap <Esc><Esc> :nohlsearch<CR>
+
+" indent
+filetype on
+augroup vimrc
+	autocmd!
+	autocmd FileType c,cpp setl cindent
+	autocmd FileType c,h setl noexpandtab tabstop=4 shiftwidth=4
+	autocmd FileType cpp,hpp setl expandtab tabstop=2 shiftwidth=2
+	autocmd FileType js,ts setl expandtab tabstop=2 shiftwidth=2
+	autocmd FileType go setl noexpandtab tabstop=2 shiftwidth=2
+	autocmd FileType rust,php setl expandtab tabstop=4 shiftwidth=4
+augroup END
+
 " git commit 時にはプラグインは読み込まない
 if $HOME != $USERPROFILE && $GIT_EXEC_PATH != ''
   finish
@@ -61,34 +105,3 @@ nnoremap <F12> :LspDefinition<CR>
 nnoremap <S-F12> :LspDeclaration<CR>
 nnoremap gd :LspDefinition<CR>
 
-" indent
-filetype on
-augroup vimrc
-	autocmd!
-	autocmd FileType c,cpp setl cindent
-	autocmd FileType c,h setl noexpandtab tabstop=4 shiftwidth=4
-	autocmd FileType cpp,hpp setl expandtab tabstop=2 shiftwidth=2
-	autocmd FileType js,ts setl expandtab tabstop=2 shiftwidth=2
-	autocmd FileType go setl noexpandtab tabstop=2 shiftwidth=2
-	autocmd FileType rust,php setl expandtab tabstop=4 shiftwidth=4
-augroup END
-
-" etc config
-language en_US.utf-8
-syntax enable
-set number
-set cursorline
-set smartindent
-set showmatch
-set laststatus=2
-set list listchars=tab:\▸\-,space:\·
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set encoding=UTF-8
-set backspace=2
-set mouse=a
-set hidden
-set background=dark
-set colorcolumn=80
-set expandtab
