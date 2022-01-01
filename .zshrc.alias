@@ -52,6 +52,18 @@ function ftclone () {
   fi
 }
 
+function man() {
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;33m") \
+    LESS_TERMCAP_md=$(printf "\e[1;33m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
 alias l='exa -F'
 alias la='exa -aa -F'
 alias ll='exa -l -F -aa -h -@ -m --icons --git --time-style=long-iso --color=automatic --group-directories-first'
@@ -78,4 +90,11 @@ function ide() {
   tmux split-window -v -p 30
   tmux split-window -h -p 66
   tmux split-window -h -p 50
+}
+
+function gocover() {
+  go test -cover $1 -coverprofile=cover.out
+  go tool cover -html=cover.out -o cover.html
+  rm cover.out
+  echo "generate cover.html"
 }
