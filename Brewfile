@@ -25,7 +25,7 @@ brew "cask"
 brew "clang-format"
 brew "cloc"
 brew "cmake"
-brew "php"
+brew "php", link: false
 brew "composer"
 brew "docker", link: false
 brew "dosfstools"
@@ -58,6 +58,7 @@ brew "mpc"
 brew "nasm"
 brew "openjdk@11"
 brew "pandoc"
+brew "php@8.0", link: true
 brew "plantuml"
 brew "postgresql"
 brew "protobuf"
