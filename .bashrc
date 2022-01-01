@@ -9,4 +9,4 @@ set -o vi
 export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\] '
 
 source ~/.bashrc.local
-. "$HOME/.cargo/env"
+source "$HOME/.cargo/env"
