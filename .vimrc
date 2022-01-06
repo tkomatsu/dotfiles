@@ -91,6 +91,9 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 
 " vim-airline config
 let g:airline_theme = 'iceberg'
+let g:airline#extensions#tabline#enabled = 1
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
 
 " vim-goimports
 let g:goimports = 1
