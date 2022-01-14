@@ -78,6 +78,7 @@ Plugin 'mattn/vim-lsp-settings'
 Plugin 'drmikehenry/vim-headerguard'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/vim-goimports'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 filetype plugin indent on

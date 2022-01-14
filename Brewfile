@@ -5,10 +5,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "liudangyi/i386-jos-elf-gcc"
-tap "louisbrunner/valgrind"
-tap "riscv/riscv"
-tap "shopify/shopify"
 tap "tkomatsu/pbit"
 brew "anyenv"
 brew "automake"
@@ -79,11 +75,6 @@ brew "zsh"
 brew "bfontaine/utils/rfc"
 brew "bufbuild/buf/buf"
 brew "heroku/brew/heroku"
-brew "liudangyi/i386-jos-elf-gcc/i386-jos-elf-gcc"
-brew "liudangyi/i386-jos-elf-gcc/i386-jos-elf-gdb"
-brew "louisbrunner/valgrind/valgrind", args: ["HEAD"]
-brew "riscv/riscv/riscv-tools"
-brew "shopify/shopify/shopify-cli"
 brew "tkomatsu/pbit/pbit"
 cask "adoptopenjdk"
 cask "deepl"
@@ -99,6 +90,7 @@ cask "notion"
 cask "owasp-zap"
 cask "postman"
 cask "slack"
+cask "stoplight-studio"
 cask "toggl-track"
 cask "vagrant"
 cask "visual-studio-code"
@@ -109,5 +101,6 @@ mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "RunCat", id: 1429033973
+mas "Sequel Ace", id: 1518036000
 mas "TweetDeck", id: 485812721
 mas "Xcode", id: 497799835
