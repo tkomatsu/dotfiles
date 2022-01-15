@@ -11,12 +11,10 @@ brew "automake"
 brew "bash"
 brew "bat"
 brew "binutils"
-brew "binutils-x86_64"
 brew "python@3.9"
 brew "glib"
 brew "cairo"
 brew "gmp"
-brew "nghttp2"
 brew "cask"
 brew "clang-format"
 brew "cloc"
@@ -35,7 +33,6 @@ brew "ffmpeg"
 brew "figlet"
 brew "mpfr"
 brew "gcc"
-brew "gdb", link: false
 brew "gh"
 brew "git"
 brew "go"
@@ -52,6 +49,7 @@ brew "mas"
 brew "minikube"
 brew "mpc"
 brew "nasm"
+brew "nghttp2"
 brew "openjdk@11"
 brew "pandoc"
 brew "php@8.0", link: true
@@ -97,10 +95,10 @@ cask "visual-studio-code"
 cask "wireshark"
 cask "xquartz"
 cask "zoom"
+mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
 mas "Sequel Ace", id: 1518036000
-mas "TweetDeck", id: 485812721
-mas "Xcode", id: 497799835
