@@ -1,10 +1,14 @@
-all: $$HOME/dotfiles
+all: $$HOME/dotfiles brew
 	@/bin/zsh install.sh
-	@echo "if you want to install Inconsolate fonts, exec below command."
-	@echo "wget https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata%5Bwdth%2Cwght%5D.ttf"
+
+.PHONY: brew
+brew:
+	@echo "installing Homebrew ..."
+	@which brew >/dev/null 2>&1 || /bin/bash -c "$(shell curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 $$HOME/dotfiles:
 	cd $$HOME
 
 42:
-	@/bin/zsh install-42.sh
+	@mkdir -p ~/.vim/plugin
+	@cp -r stdheader.vim ~/.vim/plugin/
