@@ -28,5 +28,3 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export LANG=en_US.UTF-8
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
