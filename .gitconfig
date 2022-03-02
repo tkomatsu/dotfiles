@@ -11,7 +11,6 @@
   unstage = restore --staged
   b = branch
   ch = checkout
-  p = push
   d = diff
   ds = diff --staged
   delete-merged-branch = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|main'|xargs git branch -d; };f"
