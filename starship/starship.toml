@@ -15,7 +15,7 @@ disabled = true
 
 [directory]
 truncation_length = 100
-truncation_symbol = false
+truncation_symbol = ""
 style = "bold #89b8c2"
 
 [git_branch]
