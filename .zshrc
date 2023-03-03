@@ -27,4 +27,5 @@ cdpath=(~/Documents)
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 export LANG=en_US.UTF-8
