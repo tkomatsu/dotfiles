@@ -86,6 +86,7 @@ alias ls='ls -G'
 alias sudo='sudo '
 
 alias python='python3'
+alias pip='pip3'
 
 alias zenn="npx zenn"
 
